@@ -11,3 +11,6 @@ The purpose of this project was to build a website showcasing the latest NASA ne
 
 
 ![FullScreen1](https://github.com/mein0819/Mission-to-Mars/blob/main/readMe_Images/page1_full.png)![FullScreen2](https://github.com/mein0819/Mission-to-Mars/blob/main/readMe_Images/page2_full.png)
+
+
+![Responsive1](https://github.com/mein0819/Mission-to-Mars/blob/main/readMe_Images/page1_responsive.png)!
