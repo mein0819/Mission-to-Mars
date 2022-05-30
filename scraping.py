@@ -97,7 +97,7 @@ def mars_facts():
     df.set_index('Description', inplace=True)
 
     # Convert dataframe into HTML format, add bootstrap
-    return df.to_html(classes="table table-dark table-bordered")
+    return df.to_html(classes="table table-dark table-bordered text-info")
 
 # Function for scraping hi-res hemisphere images
 
