@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" 
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: black;">
+    <div class="container">
+        <!--Header-->
+        <div class="jumbotron text-center" 
+            style="background-image: url(https://t3.ftcdn.net/jpg/02/00/82/68/240_F_200826805_PeldjwBZQDJJboSDMzP0RFe4zVVBoFp3.jpg);
+            background-size: cover; color: black">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape"
+                role="button" style="background-color:cyan; border: none; color: black;">Scrape New Data</a></p>
+        </div>
+        <!--Mars News-->
+        <div class="row" id="mars-news">
+            <div class="col-md-12">
+             <div class="media">
+                 <div class="media-body">
+                     <h2 style="color: white">Latest Mars News</h2>
+                     <!--Use Flask templating to access news title variable-->
+                     <h4 class="media-heading" style="color: white">{{mars.news_title}}</h4>
+                     <p style="color: white">{{mars.news_paragraph}}</p>
+                 </div>
+             </div>   
+            </div>
+        </div>
+        <!--Featured Image-->
+        <div class="row" id="mars-featured-image">
+            <div class="col-sm-6 col-md-8">
+                <h2  style="color: white">Featured Mars Image</h2>
+                <img 
+                  src="{{ mars.featured_image }}" 
+                  class="img-responsive" 
+                  alt="Responsive image"> 
+                </img>
+            </div>
+            <!--Mars Facts-->
+            <div class="col-md-4">
+                <div class="row" id="mars-facts">
+                    <h2 style="text-align: center; color: white">Mars Facts</h2>
+                        <div class="table-responsive">
+                            <table style="color: white">{{ mars.facts | safe }}</table>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!--Hemisphere Titles and Images-->
+        <div class="row" id="mars-hemispheres">
+            <!--Subtitle header-->
+            <div class="col-md-12">
+                <h2 style="text-align:center; color: white">Mars Hemispheres</h2>              
+            </div>
+            <!--Thumbnail images and titles-->
+            {% for hemisphere in mars.hemispheres%}
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="{{hemisphere.img_url}}" class="img-responsive" alt="Responsive Image">
+                    <div class="caption">
+                        <h2 style="text-align: left;">{{hemisphere.title}}</h2>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+</body>
+</html>
