@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The purpose of this project was to build a website showcasing the latest NASA news and images regarding their research into Mars and future missions to the planet. The information is scraped using Splinter and Beautiful Soup, stored in a NoSQL database using Mongo and then rendered through Flask using HTML and Bootstrap to create a visually appealing and interactive website.
+The purpose of this project was to build a website showcasing the latest NASA news and images regarding their research into Mars and future missions to the planet. The information is scraped using Splinter and Beautiful Soup, stored in a NoSQL database using Mongo and then rendered through Flask using HTML and Bootstrap to create a visually appealing, interactive and responsive website.
 
 ## Resources
 
@@ -14,3 +14,4 @@ The purpose of this project was to build a website showcasing the latest NASA ne
 
 
 ![Responsive1](https://github.com/mein0819/Mission-to-Mars/blob/main/readMe_Images/page1_responsive.png)!
+![Responsive2](https://github.com/mein0819/Mission-to-Mars/blob/main/readMe_Images/page2_responsive.png)
